@@ -41,7 +41,7 @@ A simple Telegram bot to extract **direct download links** from shared TeraBox U
 
 1. **Run the bot:**
    ```bash
-   python bot.py
+   python main.py
    ```
 
 2. **In Telegram:**
