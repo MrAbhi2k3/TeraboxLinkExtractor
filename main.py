@@ -75,7 +75,7 @@ async def terabox(url: str) -> str:
 client = TelegramClient('terabox_bot', api_id, api_hash).start(bot_token=bot_token)
 
 domain_pattern = "|".join(re.escape(domain) for domain in TERABOX_DOMAINS)
-url_pattern = re.compile(rf'https?://(?:www\.)?(?:{domain_pattern})/s/\S+', re.IGNORECASE)
+url_pattern = re.compile(rf'https?://(?:www\.)?(?:{domain_pattern})(?:/s/\S+|/wap/share/filelist\?surl=\S+)', re.IGNORECASE)
 
 @client.on(events.NewMessage)
 async def handle_messages(event):
