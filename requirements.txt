@@ -2,3 +2,4 @@ telethon
 requests 
 beautifulsoup4 
 lxml
+aiohttp
